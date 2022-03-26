@@ -17,16 +17,14 @@ export const Bacon = () => {
 
   return (
     <>
-      <div className="flex mt-6 justify-center">
-        <button className="btn btn-blue mb-4" onClick={addSomeRandomBacon}>
+      <div className="bacon-component">
+        <button className="btn primary" onClick={addSomeRandomBacon}>
           Yeah, I want more bacon!
         </button>
-      </div>
-      <div className="flex justify-center">
         <img
           src={sourceOfBacon}
           alt="Beautiful slices of fried bacon Archetype"
-          className="w-1/3"
+          width={300}
         />
       </div>
 
@@ -41,7 +39,11 @@ export const Bacon = () => {
             height: `${bacon.size}px`,
           }}
         >
-          <img src={sourceOfBacon} alt="Beautiful slices of fried bacon" />
+          <img
+            src={sourceOfBacon}
+            className="bacon-image"
+            alt="Beautiful slices of fried bacon"
+          />
         </div>
       ))}
     </>

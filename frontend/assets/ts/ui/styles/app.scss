@@ -1,0 +1,181 @@
+@import 'variables.scss';
+@import 'utilities.scss';
+
+@import '../Form/index.scss';
+
+@import '~@fontsource/roboto/latin.css';
+@import '~@fontsource/roboto/latin-500.css';
+@import '~@fontsource/roboto/latin-700.css';
+@import '~@fontsource/roboto/latin-900.css';
+
+body {
+  background: $background;
+  font-family: Roboto, sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w-50 {
+  width: 50%;
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.main-nav {
+  background: $header-color;
+  padding: 20px 40px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+
+    &.active {
+      color: $accent;
+      font-weight: 700;
+    }
+  }
+}
+
+.bacon-component {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+
+  button {
+    margin: 10px;
+    isolation: isolate;
+    z-index: 10;
+  }
+}
+
+.bacon-image {
+  max-width: 50%;
+  z-index: 1;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 800;
+  cursor: pointer;
+
+  &.primary {
+    background: $accent;
+    color: #fff;
+  }
+}
+
+.checkout-container {
+  @media screen and (min-width: $mobile-breakpoint) {
+    display: flex;
+    max-width: 1200px;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+  }
+
+  .checkout-step-title {
+    font-size: 13px;
+    margin-left: -27px;
+
+    .badge {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+}
+
+form.checkout {
+  margin: 40px;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    margin-left: 50px;
+    width: 100%;
+  }
+}
+
+.form-select {
+  position: relative;
+
+  select {
+    width: 100%;
+    height: $form-control-height;
+    border-radius: 5px;
+    border: 0;
+    padding: 24px 5px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0px 3px 0 #ddd;
+    transition: all 0.3s;
+
+    &:focus {
+      box-shadow: 0px 3px 0 $accent;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .form-select-label {
+    color: #555a5f;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.order-summary {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 0 #ddd;
+  flex: 0 0 400px;
+  height: 100%;
+
+  .order-summary-container {
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+  }
+
+  .order-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  hr.divider {
+    border: 1px dashed #ccc;
+  }
+
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+
+    &.total {
+      p {
+        font-weight: 700;
+        &:last-child {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

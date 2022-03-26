@@ -1,0 +1,51 @@
+.form-control {
+  position: relative;
+
+  input {
+    width: 100%;
+    height: $form-control-height;
+    border-radius: 5px;
+    border: 0;
+    padding: 30px 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0px 3px 0 #ddd;
+    transition: all 0.3s;
+
+    &:focus {
+      box-shadow: 0px 3px 0 $accent;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  label {
+    color: #555a5f;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
+  &.has-error {
+    input {
+      box-shadow: 0px 3px 0 $danger-accent;
+    }
+
+    label {
+      color: $danger-accent;
+    }
+  }
+
+  .error {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 13px;
+    color: $danger-accent;
+  }
+}

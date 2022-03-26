@@ -1,6 +1,5 @@
 import React from 'react'
-import { Bacon } from '../components'
-import { Checkout } from '../components/Checkout'
+import { Bacon, Checkout } from '../components'
 
 export enum RoutePaths {
   Home = '/',
