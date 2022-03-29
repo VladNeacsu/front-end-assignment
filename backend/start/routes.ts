@@ -21,10 +21,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 import { schema, rules } from '@ioc:Adonis/Core/Validator'
 
-Route.get('/bacon', async ({ view }) => {
-  return view.render('bacon')
-})
-
 Route.get('/cart', async () => {
   const state = {
     cart: {

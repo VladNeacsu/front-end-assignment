@@ -8,6 +8,8 @@ export const TextInput = ({ field, form: { touched, errors }, ...props }) => {
       <label htmlFor={field.name}>{props.label}</label>
       <input {...field} {...props} />
 
+      {props.addon}
+
       {hasError && <div className="error">{errors[field.name]}</div>}
     </div>
   )

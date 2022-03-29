@@ -17,7 +17,7 @@ export const routesConfig: Route[] = [
   {
     path: RoutePaths.Home,
     name: 'Home',
-    component: <div>Home</div>,
+    component: <div className="p-3">Welcome!</div>,
   },
   { path: RoutePaths.Bacon, component: <Bacon />, name: 'Bacon!' },
   {

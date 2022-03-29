@@ -76,8 +76,8 @@ interface Totals {
 }
 
 interface CheckoutResponse {
-  cart?: {
-    items?: Product[]
-    totals?: Totals
+  cart: {
+    items: Product[]
+    totals: Totals
   }
 }

@@ -46,6 +46,7 @@ export const postData = async (url: string, data = {}) => {
 
   return response
 }
+
 export const countryList = [
   { name: 'Afghanistan', code: 'AF' },
   { name: 'Åland Islands', code: 'AX' },

@@ -41,9 +41,11 @@
     {
       "pattern": "frontend/views/**/*.edge",
       "reloadServer": false
+    },
+    {
+      "pattern": "frontend/views/**/*.html",
+      "reloadServer": false
     }
   ],
-  "aceProviders": [
-    "@adonisjs/repl"
-  ]
+  "aceProviders": ["@adonisjs/repl"]
 }

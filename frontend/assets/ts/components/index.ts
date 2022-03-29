@@ -1,3 +1,3 @@
 export * from './Bacon'
-export * from './Main'
+export * from '../layout/Main'
 export * from './Checkout'

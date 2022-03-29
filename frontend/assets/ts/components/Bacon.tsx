@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { useExistingElements } from '../providers/ExistingElements'
 
 export const Bacon = () => {
-  const sourceOfBacon = findTheSourceOfBacon(useExistingElements())
+  const sourceOfBacon = 'images/bacon.jpg'
   const [baconArray, setBaconArray] = useState<BaconElement[]>([])
 
   const addSomeRandomBacon = () => {
@@ -48,12 +47,6 @@ export const Bacon = () => {
       ))}
     </>
   )
-}
-
-const findTheSourceOfBacon = (htmlString: string): string => {
-  const baconRegex = /<img[^>]*src="(.*?bacon\.jpg)"/
-  const match = htmlString.match(baconRegex)
-  return match ? match[1] : ''
 }
 
 const randomBetween = (min: number, max: number): number =>
